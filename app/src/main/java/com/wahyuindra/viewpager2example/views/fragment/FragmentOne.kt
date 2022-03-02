@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.wahyuindra.viewpager2example.R
 import com.wahyuindra.viewpager2example.databinding.FragmentOneBinding
+import com.wahyuindra.viewpager2example.utils.ARG_SECTIONS_NUMBER
 
 class FragmentOne : Fragment() {
 
@@ -27,10 +28,6 @@ class FragmentOne : Fragment() {
 
         binding.labelFragment1.text = getString(R.string.content_tab_text, index)
 
-    }
-
-    companion object{
-        const val ARG_SECTIONS_NUMBER = "section_number"
     }
 
 }

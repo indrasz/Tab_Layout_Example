@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.wahyuindra.viewpager2example.utils.ARG_SECTIONS_NUMBER
 import com.wahyuindra.viewpager2example.views.fragment.FragmentOne
 
 class TabPagerAdapter(activity : AppCompatActivity) : FragmentStateAdapter(activity) {
@@ -11,7 +12,7 @@ class TabPagerAdapter(activity : AppCompatActivity) : FragmentStateAdapter(activ
     override fun createFragment(position: Int): Fragment {
         val fragment = FragmentOne()
         fragment.arguments = Bundle().apply {
-            putInt(FragmentOne.ARG_SECTIONS_NUMBER, position + 1)
+            putInt(ARG_SECTIONS_NUMBER, position + 1)
         }
         return fragment
     }

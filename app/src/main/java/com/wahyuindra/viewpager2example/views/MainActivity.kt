@@ -27,9 +27,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val bindingTab = binding.tabs
+        val bindingViewPager = binding.viewPager
+
         val tabPagerAdapter = TabPagerAdapter(this)
-        binding.viewPager.adapter = tabPagerAdapter
-        TabLayoutMediator(binding.tabs, binding.viewPager) { tab, position ->
+        bindingViewPager.adapter = tabPagerAdapter
+        TabLayoutMediator(bindingTab, bindingViewPager) { tab, position ->
             tab.text = resources.getString(TAB_TITLES[position])
         }.attach()
 
